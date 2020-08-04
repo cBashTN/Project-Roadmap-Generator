@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ChartReadyEvent, ChartSelectEvent} from 'ng2-google-charts';
-import {Goal, StaticFileService} from '../services/static-file.service';
+import {Task, Milestone, StaticFileService} from '../services/static-file.service';
 
 @Component({
     selector: 'app-chart',
@@ -9,16 +9,27 @@ import {Goal, StaticFileService} from '../services/static-file.service';
     styleUrls: ['./chart.component.css']
 })
 export class ChartComponent implements OnInit {
-    milestones: Goal[];
+    tasks: Task[];
+    milestones: Milestone[];
     filteredId = [];
     swimlanes = new Set();
     @ViewChild('cchart') cchart;
 
     chartData = {
         chartType: 'Timeline',
+        /*
         dataTable: [
             ['Label', 'Name', 'From', 'To'],
-            ['Label', 'Dummy', new Date(2018, 0, 1), new Date(2018, 11, 31)]
+            ['Label', 'Dummy', new Date(2020, 2, 1), new Date(2020, 11, 31)]
+        ],
+        */
+        tasksDataTable: [
+            ['Label', 'Name', 'From', 'To'],
+            ['Label', 'Dummy', new Date(2020, 1, 1), new Date(2020, 11, 30)]
+        ],
+        milestonesDateTable: [
+            [ 'Title', 'Date'],
+            [ 'Dummy', new Date(2020, 3, 1)]
         ],
         options: {
             height: 700,
@@ -37,29 +48,40 @@ export class ChartComponent implements OnInit {
 
         this.route.params.subscribe(params => {
             const teamName = params['teamName'];
-            this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
+            //this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
+            this.chartData.tasksDataTable = [['Label', 'Name', 'From', 'To']];
+            this.chartData.milestonesDateTable = [['Title', 'Date']];//[];//
 
-            this.staticFileService.getFile(`${teamName}.json`).subscribe(goals => {
-                this.milestones = goals;
+            this.staticFileService.getFile(`${teamName}.json`).subscribe(roadmap => {
+                this.tasks = roadmap.tasks;
+                this.milestones = roadmap.milestones;
                 const DONT_DISPLAY_FLAG = '#NOT_ON_ROADMAP';
                 const regex = RegExp(DONT_DISPLAY_FLAG);
                 this.filteredId = [0];
                 this.swimlanes = new Set();
 
-                this.milestones
-                    .filter(milestone => !regex.test(milestone.description))
-                    .filter(milestone => milestone.start_date !== null)
-                    .filter(milestone => milestone.end_date !== null)
+                this.tasks
+                    .filter(task => !regex.test(task.description))
+                    .filter(task => task.start_date !== null)
+                    .filter(task => task.end_date !== null)
                     .sort((a, b) => new Date(a.end_date).getTime() - new Date(b.end_date).getTime())
-                    .map(milestone => {
-                        if (!milestone.category) {
-                            const cat = milestone.swimlane;
-                            milestone.category = cat ? cat : milestone.title;
+                    .map(task => {
+                        if (!task.category) {
+                            const cat = task.swimlane;
+                            task.category = cat ? cat : task.title;
                         }
-                        this.swimlanes.add(milestone.category);
-                        this.chartData.dataTable.push(
-                            [milestone.category, milestone.title, new Date(milestone.start_date), new Date(milestone.end_date)]);
-                        this.filteredId.push(milestone.link);
+                        this.swimlanes.add(task.category);
+                        //this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
+                        this.chartData.tasksDataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
+
+                            this.filteredId.push(task.link);
+                    });
+
+                this.milestones
+                    .sort((milestone) => new Date(milestone.date).getTime())
+                    .map(milestone => {
+                        this.chartData.milestonesDateTable.push(
+                            [milestone.title, milestone.date]);
                     });
                 this.chartData = Object.create(this.chartData);
             });
@@ -82,7 +104,7 @@ export class ChartComponent implements OnInit {
         const googleChartWrapper = this.cchart.wrapper;
         const dateRangeStart = googleChartWrapper.getDataTable().getColumnRange(2);
         const dateRangeEnd = googleChartWrapper.getDataTable().getColumnRange(3);
-        // let options = {height: 41 * (this.chartData.dataTable.length - 1)};
+        // let options = {height: 41 * (this.chartData.tasksDataTable.length - 1)};
         const options = {height: 41 * this.swimlanes.size - 1};
 
 
@@ -138,7 +160,7 @@ export class ChartComponent implements OnInit {
             markerLine = timeline.cloneNode(true);
             markerLine.setAttribute('y', 0);
             markerLine.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan)));
-            markerLine.setAttribute('height', height);
+            markerLine.setAttribute('height', height+100);
             markerLine.setAttribute('width', 1);
             markerLine.setAttribute('stroke', 'none');
             markerLine.setAttribute('stroke-width', '0');
@@ -146,7 +168,10 @@ export class ChartComponent implements OnInit {
             svg.appendChild(markerLine);
         }
 
-        addMarker(new Date());
+        console.log(this.chartData.milestonesDateTable);
+        this.chartData.milestonesDateTable.forEach(element => {
+           //addMarker(new Date(element[1]));
+        });
     }
 
     onResize(event) {

@@ -2,7 +2,17 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-export class Goal {
+export class Roadmap {
+    milestones: Milestone[];
+    tasks: Task[];
+}
+
+export class Milestone {
+    title: string;
+    date: string;
+}
+
+export class Task {
     title: string;
     category: string;
     start_date: string;
@@ -10,6 +20,11 @@ export class Goal {
     description: string;
     link: string;
     swimlane: string;
+}
+
+export class MenuItem {
+    routerLink: string;
+    label: string;
 }
 
 @Injectable({
@@ -20,7 +35,11 @@ export class StaticFileService {
     constructor(private http: HttpClient) {
     }
 
-    getFile(filename: string): Observable<Goal[]> {
-        return this.http.get<Goal[]>(`./assets/descriptors/${filename}`);
+    getFile(filename: string): Observable<Roadmap> {
+        return this.http.get<Roadmap>(`./assets/descriptors/${filename}`);
+    }
+
+    getMenuFile(): Observable<MenuItem[]> {
+        return this.http.get<MenuItem[]>(`./assets/descriptors/menu.json`);
     }
 }

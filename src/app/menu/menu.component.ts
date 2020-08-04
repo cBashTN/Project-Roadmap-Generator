@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
     ) {}
 
     ngOnInit() {
-        this.fileService.getFile('menu.json').subscribe(menu => {
+        this.fileService.getMenuFile().subscribe(menu => {
             this.menu = menu;
         });
     }

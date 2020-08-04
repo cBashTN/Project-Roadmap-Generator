@@ -1,15 +1,4 @@
-{
-  "milestones": [
-    {
-      "title": "Milestone 111",
-      "date": "2020-08-14"
-    },
-    {
-      "title": "Milestone 222",
-      "date": "2020-09-01"
-    }
-  ],
-  "tasks":[
+[
   {
     "title": "Build a Death Star",
     "description": "Destroy all the Rebels",
@@ -27,4 +16,3 @@
     "swimlane": "Domination"
   }
 ]
-}
