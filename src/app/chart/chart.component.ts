@@ -17,20 +17,10 @@ export class ChartComponent implements OnInit {
 
     chartData = {
         chartType: 'Timeline',
-        /*
-        dataTable: [
-            ['Label', 'Name', 'From', 'To'],
-            ['Label', 'Dummy', new Date(2020, 2, 1), new Date(2020, 11, 31)]
-        ],
-        */
-        tasksDataTable: [
-            ['Label', 'Name', 'From', 'To'],
-            ['Label', 'Dummy', new Date(2020, 1, 1), new Date(2020, 11, 30)]
-        ],
-        milestonesDateTable: [
-            [ 'Title', 'Date'],
-            [ 'Dummy', new Date(2020, 3, 1)]
-        ],
+
+        dataTable: [],
+
+        milestonesDateTable: [],
         options: {
             height: 700,
             timeline: {
@@ -48,9 +38,8 @@ export class ChartComponent implements OnInit {
 
         this.route.params.subscribe(params => {
             const teamName = params['teamName'];
-            //this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
-            this.chartData.tasksDataTable = [['Label', 'Name', 'From', 'To']];
-            this.chartData.milestonesDateTable = [['Title', 'Date']];//[];//
+            this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
+            this.chartData.milestonesDateTable = []; //[['Title', 'Date']];
 
             this.staticFileService.getFile(`${teamName}.json`).subscribe(roadmap => {
                 this.tasks = roadmap.tasks;
@@ -71,10 +60,8 @@ export class ChartComponent implements OnInit {
                             task.category = cat ? cat : task.title;
                         }
                         this.swimlanes.add(task.category);
-                        //this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
-                        this.chartData.tasksDataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
-
-                            this.filteredId.push(task.link);
+                        this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
+                        this.filteredId.push(task.link);
                     });
 
                 this.milestones
@@ -104,7 +91,7 @@ export class ChartComponent implements OnInit {
         const googleChartWrapper = this.cchart.wrapper;
         const dateRangeStart = googleChartWrapper.getDataTable().getColumnRange(2);
         const dateRangeEnd = googleChartWrapper.getDataTable().getColumnRange(3);
-        // let options = {height: 41 * (this.chartData.tasksDataTable.length - 1)};
+        // let options = {height: 41 * (this.chartData.dataTable.length - 1)};
         const options = {height: 41 * this.swimlanes.size - 1};
 
 
@@ -170,7 +157,7 @@ export class ChartComponent implements OnInit {
 
         console.log(this.chartData.milestonesDateTable);
         this.chartData.milestonesDateTable.forEach(element => {
-           //addMarker(new Date(element[1]));
+           addMarker(new Date(element[1]));
         });
     }
 
