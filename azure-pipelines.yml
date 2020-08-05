@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
-- checkout: MyGitHubRepo
+- checkout: Project-Roadmap-Generator
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
