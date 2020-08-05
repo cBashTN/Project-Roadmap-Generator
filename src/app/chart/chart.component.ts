@@ -95,7 +95,7 @@ export class ChartComponent implements OnInit {
         const options = {height: 41 * this.swimlanes.size - 1};
 
 
-        function addMarker(markerDate) {
+        function addMarker(title, markerDate, i) {
             let baseline;
             let baselineBounds;
             let chartElements;
@@ -142,22 +142,33 @@ export class ChartComponent implements OnInit {
             timespan = dateRangeEnd.max.getTime() - dateRangeStart.min.getTime();
             timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
             markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
+            const xPos = (baselineBounds.x + (timelineUnit * markerSpan));
 
             // add line
             markerLine = timeline.cloneNode(true);
             markerLine.setAttribute('y', 0);
-            markerLine.setAttribute('x', (baselineBounds.x + (timelineUnit * markerSpan)));
-            markerLine.setAttribute('height', height+100);
+            markerLine.setAttribute('x', xPos);
+            markerLine.setAttribute('height', height + 50 + i);
             markerLine.setAttribute('width', 1);
             markerLine.setAttribute('stroke', 'none');
             markerLine.setAttribute('stroke-width', '0');
             markerLine.setAttribute('fill', '#e91e63');
             svg.appendChild(markerLine);
+
+            // Add label to line
+            markerLabel.textContent = title;
+            markerLabel.setAttribute('x', xPos - 5);
+            markerLabel.setAttribute('y', height + 50 + i);
+            markerLabel.setAttribute('fill', '#e91e63');
+            markerLabel.setAttribute('stroke', '#e91e63');
+            svg.appendChild(markerLabel);
         }
 
         console.log(this.chartData.milestonesDateTable);
+        let i = 0;
         this.chartData.milestonesDateTable.forEach(element => {
-           addMarker(new Date(element[1]));
+           addMarker(element[0], new Date(element[1]), i);
+           i += 20;
         });
     }
 
