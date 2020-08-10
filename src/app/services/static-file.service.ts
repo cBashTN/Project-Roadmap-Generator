@@ -20,6 +20,7 @@ export class Task {
     description: string;
     link: string;
     swimlane: string;
+    resource: string;
 }
 
 export class MenuItem {

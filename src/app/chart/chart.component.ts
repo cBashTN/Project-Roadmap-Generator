@@ -37,11 +37,12 @@ export class ChartComponent implements OnInit {
                 private staticFileService: StaticFileService) {
 
         this.route.params.subscribe(params => {
-            const teamName = params['teamName'];
+            const pointOfView = params['pointOfView'];
+            const isProjectsPointOfView = pointOfView === 'projects';
             this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
             this.chartData.milestonesDateTable = []; //[['Title', 'Date']];
 
-            this.staticFileService.getFile(`${teamName}.json`).subscribe(roadmap => {
+            this.staticFileService.getFile(`${pointOfView}.json`).subscribe(roadmap => {
                 this.tasks = roadmap.tasks;
                 this.milestones = roadmap.milestones;
                 const DONT_DISPLAY_FLAG = '#NOT_ON_ROADMAP';
@@ -56,8 +57,15 @@ export class ChartComponent implements OnInit {
                     .sort((a, b) => new Date(a.end_date).getTime() - new Date(b.end_date).getTime())
                     .map(task => {
                         if (!task.category) {
-                            const cat = task.swimlane;
-                            task.category = cat ? cat : task.title;
+                          let cat = task.swimlane;
+                          if (!isProjectsPointOfView) {
+                            cat = task.resource;
+                            console.log('XXXXXXXXXXXXXXXXXXXXXXXXXX');
+                            console.log(cat);
+                          } else {
+                            task.title = task.resource;
+                          }
+                          task.category = cat ? cat : task.title;
                         }
                         this.swimlanes.add(task.category);
                         this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
@@ -159,12 +167,12 @@ export class ChartComponent implements OnInit {
             markerLabel.textContent = title;
             markerLabel.setAttribute('x', xPos - 5);
             markerLabel.setAttribute('y', height + 50 + i);
-            markerLabel.setAttribute('fill', '#e91e63');
+            markerLabel.setAttribute('stroke-width', '1');
             markerLabel.setAttribute('stroke', '#e91e63');
             svg.appendChild(markerLabel);
         }
 
-        console.log(this.chartData.milestonesDateTable);
+        //console.log(this.chartData.milestonesDateTable);
         let i = 0;
         this.chartData.milestonesDateTable.forEach(element => {
            addMarker(element[0], new Date(element[1]), i);

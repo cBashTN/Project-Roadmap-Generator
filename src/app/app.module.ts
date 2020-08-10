@@ -19,8 +19,8 @@ import { Ng2GoogleChartsModule } from "ng2-google-charts";
 import { BrowserModule } from "@angular/platform-browser";
 
 export const routes: Routes = [
-  { path: "", redirectTo: "chart/empire", pathMatch: "full" },
-  { path: "chart/:teamName", component: ChartComponent }
+  { path: "", redirectTo: "chart/projects", pathMatch: "full" },
+  { path: "chart/:pointOfView", component: ChartComponent }
 ];
 
 @NgModule({

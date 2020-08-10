@@ -1,0 +1,149 @@
+{
+  "milestones": [
+    {
+      "title": "Milestone 111",
+      "date": "2020-08-14"
+    },
+    {
+      "title": "Milestone 222",
+      "date": "2020-09-01"
+    }
+  ],
+  "tasks":[
+    {
+      "title": "KOLIBRI Cloud - Frontend",
+      "description": "KOLIBRI Cloud - Frontend development",
+      "start_date": "2020-08-01",
+      "end_date": "2020-08-30",
+      "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+      "swimlane": "KOLIBRI Cloud FE",
+      "resource": "Benjamin"
+    },
+  {
+    "title": "Support",
+    "description": "Customer Support, Sales Support, Marketing, Documentation and more",
+    "start_date": "2020-08-01",
+    "end_date": "2020-08-16",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "SensWeb",
+    "description": "Project SensWeb - MathMod Cloud",
+    "start_date": "2020-08-15",
+    "end_date": "2020-08-20",
+    "link": "www.keller-druck.com",
+    "swimlane": "Project SensWeb",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "KOLIBRI Cloud - Frontend",
+    "description": "KOLIBRI Cloud - Frontend development",
+    "start_date": "2020-08-20",
+    "end_date": "2020-08-30",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud FE",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "Support",
+    "description": "Customer Support, Sales Support, Marketing, Documentation and more",
+    "start_date": "2020-09-01",
+    "end_date": "2020-09-11",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "KOLIBRI Mobile",
+    "description": "KOLIBRI Mobile",
+    "start_date": "2020-09-10",
+    "end_date": "2020-09-30",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Mobile",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "Support",
+    "description": "Customer Support, Sales Support, Marketing, Documentation and more",
+    "start_date": "2020-10-01",
+    "end_date": "2020-10-16",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "KOLIBRI Mobile",
+    "description": "KOLIBRI Mobile",
+    "start_date": "2020-10-15",
+    "end_date": "2020-10-30",
+    "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-mobile",
+    "swimlane": "KOLIBRI Mobile",
+    "resource": "Sebastian"
+  },
+  {
+    "title": "KOLIBRI Cloud - Frontend",
+    "description": "KOLIBRI Cloud - Frontend development",
+    "start_date": "2020-08-01",
+    "end_date": "2020-08-16",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud FE",
+    "resource": "Lukas"
+  },
+  {
+    "title": "KOLIBRI Desktop",
+    "description": "The new Logger",
+    "start_date": "2020-08-15",
+    "end_date": "2020-08-21",
+    "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
+    "swimlane": "KOLIBRI Desktop",
+    "resource": "Lukas"
+  },
+  {
+    "title": "KOLIBRI Mobile",
+    "description": "KOLIBRI Mobile",
+    "start_date": "2020-08-20",
+    "end_date": "2020-08-30",
+    "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-mobile",
+    "swimlane": "KOLIBRI Mobile",
+    "resource": "Lukas"
+  },
+  {
+    "title": "KOLIBRI Mobile",
+    "description": "KOLIBRI Mobile",
+    "start_date": "2020-09-01",
+    "end_date": "2020-09-21",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Mobile",
+    "resource": "Lukas"
+  },
+  {
+    "title": "Support",
+    "description": "Customer Support, Sales Support, Marketing, Documentation and more",
+    "start_date": "2020-09-20",
+    "end_date": "2020-09-30",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud",
+    "resource": "Lukas"
+  },
+  {
+    "title": "KOLIBRI Mobile",
+    "description": "KOLIBRI Mobile",
+    "start_date": "2020-10-01",
+    "end_date": "2020-10-16",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Mobile",
+    "resource": "Lukas"
+  },
+  {
+    "title": "Support",
+    "description": "Customer Support, Sales Support, Marketing, Documentation and more",
+    "start_date": "2020-10-15",
+    "end_date": "2020-10-30",
+    "link": "https://docs.kolibricloud.ch/overview/roadmap/",
+    "swimlane": "KOLIBRI Cloud",
+    "resource": "Lukas"
+  }
+]
+}

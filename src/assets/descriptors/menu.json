@@ -1,10 +1,10 @@
 [
   {
-    "routerLink": "/chart/empire",
-    "label": "Empire"
+    "routerLink": "/chart/projects",
+    "label": "Projects"
   },
   {
-    "routerLink": "/chart/rebellion",
-    "label": "Rebellion"
+    "routerLink": "/chart/people",
+    "label": "People"
   }
 ]
