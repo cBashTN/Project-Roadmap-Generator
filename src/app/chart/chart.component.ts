@@ -90,7 +90,7 @@ export class ChartComponent implements OnInit {
           .sort((milestone) => new Date(milestone.date).getTime())
           .map(milestone => {
             this.chartData.milestonesDateTable.push(
-              [milestone.title, milestone.date]);
+              [milestone.title, milestone.date, milestone.color]);
           });
         this.chartData = Object.create(this.chartData);
       });
@@ -117,7 +117,7 @@ export class ChartComponent implements OnInit {
     const options = { height: 41 * this.swimlanes.size - 1 };
 
 
-    function addMarker(title, markerDate, i) {
+    function addMarker(title, markerDate, color, i) {
       let baseline;
       let baselineBounds;
       let chartElements;
@@ -130,6 +130,7 @@ export class ChartComponent implements OnInit {
       let timelineWidth;
       let timespan;
       let height;
+      let titleText: string;
 
       baseline = null;
       timeline = null;
@@ -165,6 +166,7 @@ export class ChartComponent implements OnInit {
       timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
       markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
       const xPos = (baselineBounds.x + (timelineUnit * markerSpan));
+      const xDiffBasedOnPositionAndTitleLength = 2 * title.length + (timelineWidth / 2.0 - xPos) / 10.0;
 
       // add line
       markerLine = timeline.cloneNode(true);
@@ -174,22 +176,21 @@ export class ChartComponent implements OnInit {
       markerLine.setAttribute('width', 1);
       markerLine.setAttribute('stroke', 'none');
       markerLine.setAttribute('stroke-width', '0');
-      markerLine.setAttribute('fill', '#e91e63');
+      markerLine.setAttribute('fill', color);
       svg.appendChild(markerLine);
 
       // Add label to line
       markerLabel.textContent = title;
-      markerLabel.setAttribute('x', xPos - 5);
-      markerLabel.setAttribute('y', height + 50 + i);
-      markerLabel.setAttribute('stroke-width', '1');
-      markerLabel.setAttribute('stroke', '#e91e63');
+      markerLabel.setAttribute('x', xPos + 10 + xDiffBasedOnPositionAndTitleLength);
+      markerLabel.setAttribute('y', height + 50 + i + 10);
+      markerLabel.setAttribute('stroke-width', '0.4');
+      markerLabel.setAttribute('stroke', color);
       svg.appendChild(markerLabel);
     }
 
-    //console.log(this.chartData.milestonesDateTable);
     let i = 0;
     this.chartData.milestonesDateTable.forEach(element => {
-      addMarker(element[0], new Date(element[1]), i);
+      addMarker(element[0], new Date(element[1]), element[2], i);
       i += 20;
     });
   }

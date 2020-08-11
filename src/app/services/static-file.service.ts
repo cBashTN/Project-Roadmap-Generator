@@ -10,6 +10,7 @@ export class Roadmap {
 export class Milestone {
     title: string;
     date: string;
+    color: string;
 }
 
 export class Task {

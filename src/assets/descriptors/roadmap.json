@@ -2,35 +2,43 @@
   "milestones": [
     {
       "title": "Desktop: New Release - Chinese/Polish/Bugfixes",
-      "date": "2020-08-11"
-    },
-    {
-      "title": "Mobile: Release - Together with new HW/FW & Events/Configuration",
-      "date": "2020-12-01"
-    },
-    {
-      "title": "Desktop: New Release - Zeroing/Gain factor/UX/Youtube Videos",
-      "date": "2020-12-30"
-    },
-    {
-      "title": "Desktop: New Release - Compensation with multiple Records",
-      "date": "2021-03-01"
+      "date": "2020-08-11",
+      "color": "#4285f4"
     },
     {
       "title": "Cloud: Explainer videos / Process Descriptions",
-      "date": "2020-11-01"
+      "date": "2020-11-01",
+      "color": "#00acc1"
+    },
+    {
+      "title": "Mobile: Release - Together with new HW/FW & Events/Configuration",
+      "date": "2020-12-01",
+      "color": "#ab47bc"
+    },
+    {
+      "title": "Desktop: New Release - Zeroing/Gain factor/UX/Youtube Videos",
+      "date": "2020-12-30",
+      "color": "#4285f4"
     },
     {
       "title": "Cloud: DeviceConfiguration for LoRa devices",
-      "date": "2021-01-20"
+      "date": "2021-01-20",
+      "color": "#00acc1"
+    },
+    {
+      "title": "Desktop: New Release - Compensation with multiple Records",
+      "date": "2021-03-01",
+      "color": "#4285f4"
     },
     {
       "title": "Cloud: Handle multiple Configurations per device",
-      "date": "2021-04-01"
+      "date": "2021-04-01",
+      "color": "#00acc1"
     },
     {
       "title": "Cloud: Rest of imp. Prio3 + Prio4 features",
-      "date": "2021-10-20"
+      "date": "2021-10-20",
+      "color": "#00acc1"
     }
   ],
   "tasks": [
