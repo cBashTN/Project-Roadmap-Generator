@@ -166,7 +166,12 @@ export class ChartComponent implements OnInit {
       timelineUnit = (timelineWidth - baselineBounds.x) / timespan;
       markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
       const xPos = (baselineBounds.x + (timelineUnit * markerSpan));
-      const xDiffBasedOnPositionAndTitleLength = 2 * title.length + (timelineWidth / 2.0 - xPos) / 10.0;
+      const ifPositionedAtLeftSide = xPos < (5 * title.length);
+
+      console.log('xPos'); console.log(xPos);
+      console.log('title.length'); console.log(title.length);
+      console.log('ifPositionedAtLeftSide');
+      console.log(ifPositionedAtLeftSide);
 
       // add line
       markerLine = timeline.cloneNode(true);
@@ -181,7 +186,11 @@ export class ChartComponent implements OnInit {
 
       // Add label to line
       markerLabel.textContent = title;
-      markerLabel.setAttribute('x', xPos + 10 + xDiffBasedOnPositionAndTitleLength);
+      if (ifPositionedAtLeftSide) {
+        markerLabel.setAttribute('x', xPos + 2 * title.length);
+      } else {
+        markerLabel.setAttribute('x', xPos + 10);
+      }
       markerLabel.setAttribute('y', height + 50 + i + 10);
       markerLabel.setAttribute('stroke-width', '0.4');
       markerLabel.setAttribute('stroke', color);
