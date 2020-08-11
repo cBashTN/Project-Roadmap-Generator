@@ -8,7 +8,6 @@ import {StaticFileService} from '../services/static-file.service';
 })
 export class MenuComponent implements OnInit {
     menu = [];
-    isZoomOutToggleChecked = false;
 
     constructor(
         private fileService: StaticFileService

@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild/*, Input */ } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ChartReadyEvent, ChartSelectEvent } from 'ng2-google-charts';
 import { Task, Milestone, StaticFileService } from '../services/static-file.service';
-//import { MenuToggleService } from '../services/menu-toggle.service';
 
 @Component({
   selector: 'app-chart',
@@ -15,8 +14,7 @@ export class ChartComponent implements OnInit {
   filteredId = [];
   swimlanes = new Set();
   @ViewChild('cchart') cchart;
-
-  //  @Input() isZoomOutToggleChecked: boolean;
+  checked = false;
 
   chartData = {
     chartType: 'Timeline',
@@ -38,7 +36,6 @@ export class ChartComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private staticFileService: StaticFileService
   ) {
-
     this.route.params.subscribe(params => {
 
       const isProjectsPointOfView = params['pointOfView'] === 'projects';
@@ -51,39 +48,11 @@ export class ChartComponent implements OnInit {
       this.staticFileService.getRoadmapFile().subscribe(roadmap => {
         this.tasks = roadmap.tasks;
         this.milestones = roadmap.milestones;
-        const DONT_DISPLAY_FLAG = '#NOT_ON_ROADMAP';
-        const regex = RegExp(DONT_DISPLAY_FLAG);
+
         this.filteredId = [0];
         this.swimlanes = new Set();
-        const numberOfMonth = 24;
-        let maxShowDate = new Date().getTime() + numberOfMonth * 30 * 24 * 60 * 60 * 1000;
-        //     if (this.menu.isZoomOutToggleChecked) {
-        //       maxShowDate = new Date().getTime() + Number.MAX_SAFE_INTEGER;
-        //     }
-        //console.log("this.isZoomOutToggleChecked :");
-        //            console.log(this.menuToggleService.emitData());
-        // console.log(this.menuComponent.isZoomOutToggleChecked.toString());
 
-        this.tasks
-          .filter(task => !regex.test(task.description))
-          .filter(task => task.start_date !== null)
-          .filter(task => new Date(task.start_date).getTime() < maxShowDate)
-          .filter(task => task.end_date !== null)
-          .sort((a, b) => new Date(a.end_date).getTime() - new Date(b.end_date).getTime())
-          .map(task => {
-            if (!task.category) {
-              let cat = task.swimlane;
-              if (!isProjectsPointOfView) {
-                cat = task.resource;
-              } else {
-                task.title = task.resource;
-              }
-              task.category = cat ? cat : task.title;
-            }
-            this.swimlanes.add(task.category);
-            this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
-            this.filteredId.push(task.link);
-          });
+        this.UpdateTasks(isProjectsPointOfView);
 
         this.milestones
           .sort((milestone) => new Date(milestone.date).getTime())
@@ -91,9 +60,42 @@ export class ChartComponent implements OnInit {
             this.chartData.milestonesDateTable.push(
               [milestone.title, milestone.date, milestone.color]);
           });
+
         this.chartData = Object.create(this.chartData);
       });
     });
+  }
+
+  private UpdateTasks(isProjectsPointOfView: boolean) {
+    const DONT_DISPLAY_FLAG = '#NOT_ON_ROADMAP';
+    const regex = RegExp(DONT_DISPLAY_FLAG);
+    const numberOfMonth = 3;
+
+    let maxShowDate = (this.checked) ?
+      (new Date().getTime() + numberOfMonth * 30 * 24 * 60 * 60 * 1000) :
+      (new Date().getTime() + Number.MAX_SAFE_INTEGER);
+
+    this.tasks
+      .filter(task => !regex.test(task.description))
+      .filter(task => task.start_date !== null)
+      .filter(task => new Date(task.start_date).getTime() < maxShowDate)
+      .filter(task => task.end_date !== null)
+      .sort((a, b) => new Date(a.end_date).getTime() - new Date(b.end_date).getTime())
+      .map(task => {
+        if (!task.category) {
+          let cat = task.swimlane;
+          if (!isProjectsPointOfView) {
+            cat = task.resource;
+          }
+          else {
+            task.title = task.resource;
+          }
+          task.category = cat ? cat : task.title;
+        }
+        this.swimlanes.add(task.category);
+        this.chartData.dataTable.push([task.category, task.title, new Date(task.start_date), new Date(task.end_date)]);
+        this.filteredId.push(task.link);
+      });
   }
 
   ngOnInit() {
@@ -106,6 +108,10 @@ export class ChartComponent implements OnInit {
     window.open(url, '_blank');
   }
 
+  toggleChanged() {
+    console.log('Toggle checked: ' + this.checked);
+  }
+
   public ready(event: ChartReadyEvent) {
     const container = document.getElementById('timeline');
     const googleChartWrapper = this.cchart.wrapper;
@@ -113,7 +119,6 @@ export class ChartComponent implements OnInit {
     const dateRangeEnd = googleChartWrapper.getDataTable().getColumnRange(3);
     // let options = {height: 41 * (this.chartData.dataTable.length - 1)};
     const options = { height: 41 * this.swimlanes.size - 1 };
-
 
     function addMarker(title, markerDate, color, i) {
       let baseline;

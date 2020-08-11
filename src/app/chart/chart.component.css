@@ -1,0 +1,9 @@
+.enhance-toggle {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: x-small;
+  height: 6px;
+  margin: 20px;
+  vertical-align: middle;
+}

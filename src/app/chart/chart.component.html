@@ -3,3 +3,6 @@
               (chartReady)='ready($event)'
               (window:resize)='onResize($event)'></google-chart>
 
+<mat-slide-toggle [(ngModel)]="checked" class="enhance-toggle"  (change)="toggleChanged()">
+   Show only next 3 month
+</mat-slide-toggle>
