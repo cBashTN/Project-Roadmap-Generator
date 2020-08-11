@@ -40,6 +40,10 @@ export class StaticFileService {
         return this.http.get<Roadmap>(`./assets/descriptors/${filename}`);
     }
 
+    getRoadmapFile(): Observable<Roadmap> {
+      return this.http.get<Roadmap>(`./assets/descriptors/roadmap.json`);
+  }
+
     getMenuFile(): Observable<MenuItem[]> {
         return this.http.get<MenuItem[]>(`./assets/descriptors/menu.json`);
     }

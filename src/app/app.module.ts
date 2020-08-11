@@ -17,6 +17,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { Ng2GoogleChartsModule } from "ng2-google-charts";
 import { BrowserModule } from "@angular/platform-browser";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 export const routes: Routes = [
   { path: "", redirectTo: "chart/projects", pathMatch: "full" },
@@ -39,7 +40,8 @@ export const routes: Routes = [
     FormsModule,
     MatSnackBarModule,
     Ng2GoogleChartsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,3 +17,13 @@
     margin: 0 4px 3px 0;
     vertical-align: middle;
 }
+
+.enhance-toggle {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-size: x-small;
+  height: 6px;
+  margin: 20px;
+  vertical-align: middle;
+}

@@ -14,7 +14,7 @@
       "title": "KOLIBRI Cloud - Frontend",
       "description": "KOLIBRI Cloud - Frontend development",
       "start_date": "2020-08-01",
-      "end_date": "2020-08-30",
+      "end_date": "2020-08-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
       "swimlane": "KOLIBRI Cloud FE",
       "resource": "Benjamin"
@@ -23,7 +23,7 @@
     "title": "Support",
     "description": "Customer Support, Sales Support, Marketing, Documentation and more",
     "start_date": "2020-08-01",
-    "end_date": "2020-08-15",
+    "end_date": "2020-08-16",
     "link": "https://docs.kolibricloud.ch/overview/roadmap/",
     "swimlane": "KOLIBRI Cloud",
     "resource": "Sebastian"
@@ -86,7 +86,7 @@
     "title": "KOLIBRI Cloud - Frontend",
     "description": "KOLIBRI Cloud - Frontend development",
     "start_date": "2020-08-01",
-    "end_date": "2020-08-15",
+    "end_date": "2020-08-16",
     "link": "https://docs.kolibricloud.ch/overview/roadmap/",
     "swimlane": "KOLIBRI Cloud FE",
     "resource": "Lukas"
