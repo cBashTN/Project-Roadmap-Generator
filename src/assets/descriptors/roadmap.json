@@ -118,7 +118,7 @@
       "title": "Support",
       "description": "Customer Support, Sales Support, Marketing, Documentation and more",
       "start_date": "2020-11-01",
-      "end_date": "2020-11-15",
+      "end_date": "2020-11-16",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
       "swimlane": "KOLIBRI Cloud Support",
       "resource": "Sebastian"
@@ -181,7 +181,7 @@
       "title": "KOLIBRI Cloud Backend",
       "description": "Backend",
       "start_date": "2021-02-15",
-      "end_date": "2021-02-31",
+      "end_date": "2021-02-28",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
       "swimlane": "KOLIBRI Cloud Backend",
       "resource": "Sebastian"
@@ -199,7 +199,7 @@
       "title": "KOLIBRI Cloud Backend",
       "description": "Backend",
       "start_date": "2021-03-15",
-      "end_date": "2021-03-31",
+      "end_date": "2021-03-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
       "swimlane": "KOLIBRI Cloud Backend",
       "resource": "Sebastian"
@@ -217,7 +217,7 @@
       "title": "KOLIBRI Cloud Backend",
       "description": "Backend",
       "start_date": "2021-04-15",
-      "end_date": "2021-04-31",
+      "end_date": "2021-04-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
       "swimlane": "KOLIBRI Cloud Backend",
       "resource": "Sebastian"
@@ -460,7 +460,7 @@
       "title": "KOLIBRI Desktop",
       "description": "The new Logger",
       "start_date": "2021-02-15",
-      "end_date": "2021-02-30",
+      "end_date": "2021-02-28",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
       "swimlane": "KOLIBRI Desktop",
       "resource": "Lukas"

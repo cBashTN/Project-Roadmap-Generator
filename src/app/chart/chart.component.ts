@@ -45,7 +45,6 @@ export class ChartComponent implements OnInit {
       this.chartData.dataTable = [['Label', 'Name', 'From', 'To']];
       this.chartData.milestonesDateTable = []; //[['Title', 'Date']];
 
-
       // Use this if you want to use multiple (different) roadmaps. See Empire/Rebels example
       // this.staticFileService.getFile(`${pointOfView}.json`).subscribe(roadmap => {
 
@@ -95,7 +94,6 @@ export class ChartComponent implements OnInit {
         this.chartData = Object.create(this.chartData);
       });
     });
-
   }
 
   ngOnInit() {
@@ -130,7 +128,6 @@ export class ChartComponent implements OnInit {
       let timelineWidth;
       let timespan;
       let height;
-      let titleText: string;
 
       baseline = null;
       timeline = null;
@@ -167,11 +164,6 @@ export class ChartComponent implements OnInit {
       markerSpan = markerDate.getTime() - dateRangeStart.min.getTime();
       const xPos = (baselineBounds.x + (timelineUnit * markerSpan));
       const ifPositionedAtLeftSide = xPos < (5 * title.length);
-
-      console.log('xPos'); console.log(xPos);
-      console.log('title.length'); console.log(title.length);
-      console.log('ifPositionedAtLeftSide');
-      console.log(ifPositionedAtLeftSide);
 
       // add line
       markerLine = timeline.cloneNode(true);

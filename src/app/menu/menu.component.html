@@ -1,10 +1,6 @@
 <mat-toolbar color="primary" class="mat-elevation-z6 app-header">
 
-    <a mat-button-icon class="docs-button" routerLink="/"
-       aria-label="Ganttilla">
-        <img class="app-logo"
-             src="/assets/logo.svg"
-             alt="angular">
+    <a mat-button-icon class="docs-button" routerLink="/" aria-label="Ganttilla">
     </a>
 
     <button mat-button routerLinkActive="mat-accent" routerLink="{{item.routerLink}}" *ngFor="let item of menu">
@@ -15,10 +11,7 @@
 
     <mat-slide-toggle class="enhance-toggle" [(ngModel)]="isZoomOutToggleChecked">Zoom out</mat-slide-toggle>
 
-    <a mat-button href="https://github.com/ocadotechnology/ganttilla" aria-label="GitHub Repository">
-        <img class="app-logo"
-             src="/assets/github-circle-white-transparent.svg"
-             alt="github">
+    <a mat-button href="http://www.keller-druck2.ch/swupdate/KOLIBRI/Roadmap/index.html">
         <span>ROADMAP KOLIBRI</span>
     </a>
 </mat-toolbar>
