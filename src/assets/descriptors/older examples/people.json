@@ -2,37 +2,32 @@
   "milestones": [
     {
       "title": "Desktop: New Release - Chinese/Polish/Bugfixes",
-      "date": "2020-08-11",
+      "date": "2020-09-11",
       "color": "#4285f4"
     },
     {
       "title": "Cloud: Explainer videos / Process Descriptions",
-      "date": "2020-11-01",
+      "date": "2021-02-01",
       "color": "#00acc1"
     },
     {
       "title": "Mobile: Release - Together with new HW/FW & Events/Configuration",
-      "date": "2020-12-01",
+      "date": "2021-04-01",
       "color": "#ab47bc"
     },
     {
-      "title": "Desktop: New Release - Zeroing/Gain factor/UX/Youtube Videos",
-      "date": "2020-12-30",
+      "title": "Desktop: New Release - Zeroing/Gain factor/UX",
+      "date": "2021-03-30",
       "color": "#4285f4"
     },
     {
-      "title": "Cloud: DeviceConfiguration for LoRa devices",
-      "date": "2021-01-20",
-      "color": "#00acc1"
-    },
-    {
       "title": "Desktop: New Release - Compensation with multiple Records",
-      "date": "2021-03-01",
+      "date": "2021-08-01",
       "color": "#4285f4"
     },
     {
       "title": "Cloud: Handle multiple Configurations per device",
-      "date": "2021-04-01",
+      "date": "2021-07-01",
       "color": "#00acc1"
     },
     {
@@ -43,12 +38,12 @@
   ],
   "tasks": [
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2020-08-01",
       "end_date": "2020-08-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Benjamin"
     },
     {
@@ -57,7 +52,7 @@
       "start_date": "2020-08-01",
       "end_date": "2020-08-16",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
@@ -70,12 +65,12 @@
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2020-08-20",
       "end_date": "2020-08-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Sebastian"
     },
     {
@@ -84,16 +79,16 @@
       "start_date": "2020-09-01",
       "end_date": "2020-09-10",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-09-10",
       "end_date": "2020-09-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Sebastian"
     },
     {
@@ -102,16 +97,16 @@
       "start_date": "2020-10-01",
       "end_date": "2020-10-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-10-15",
       "end_date": "2020-10-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-mobile",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Sebastian"
     },
     {
@@ -120,7 +115,7 @@
       "start_date": "2020-11-01",
       "end_date": "2020-11-16",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
@@ -133,21 +128,21 @@
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2020-12-01",
       "end_date": "2020-12-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2020-12-15",
       "end_date": "2020-12-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
@@ -156,34 +151,34 @@
       "start_date": "2021-01-01",
       "end_date": "2021-01-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-01-15",
       "end_date": "2021-01-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-02-01",
       "end_date": "2021-02-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-02-15",
       "end_date": "2021-02-28",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
@@ -192,34 +187,34 @@
       "start_date": "2021-03-01",
       "end_date": "2021-03-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-03-15",
       "end_date": "2021-03-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-04-01",
       "end_date": "2021-04-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-04-15",
       "end_date": "2021-04-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
@@ -228,34 +223,34 @@
       "start_date": "2021-05-01",
       "end_date": "2021-05-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-05-15",
       "end_date": "2021-05-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-06-01",
       "end_date": "2021-06-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-06-15",
       "end_date": "2021-06-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
@@ -264,34 +259,34 @@
       "start_date": "2021-07-01",
       "end_date": "2021-07-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-07-15",
       "end_date": "2021-07-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-08-01",
       "end_date": "2021-08-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-08-15",
       "end_date": "2021-08-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
@@ -300,70 +295,70 @@
       "start_date": "2021-09-01",
       "end_date": "2021-09-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-09-15",
       "end_date": "2021-09-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-10-01",
       "end_date": "2021-10-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-10-15",
       "end_date": "2021-10-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Sebastian"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2020-08-01",
       "end_date": "2020-08-06",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2020-08-06",
       "end_date": "2020-08-20",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-08-20",
       "end_date": "2020-08-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-mobile",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-09-01",
       "end_date": "2020-09-20",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Lukas"
     },
     {
@@ -372,43 +367,43 @@
       "start_date": "2020-09-20",
       "end_date": "2020-09-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-10-01",
       "end_date": "2020-10-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2020-10-15",
       "end_date": "2020-10-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-11-01",
       "end_date": "2020-11-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Mobile",
-      "description": "KOLIBRI Mobile",
+      "title": "Mobile",
+      "description": "Mobile",
       "start_date": "2020-11-15",
       "end_date": "2020-11-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Mobile",
+      "swimlane": "Mobile",
       "resource": "Lukas"
     },
     {
@@ -417,34 +412,34 @@
       "start_date": "2020-12-01",
       "end_date": "2020-12-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2020-12-15",
       "end_date": "2020-12-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-01-01",
       "end_date": "2021-01-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-01-15",
       "end_date": "2021-01-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Lukas"
     },
     {
@@ -453,34 +448,34 @@
       "start_date": "2021-02-01",
       "end_date": "2021-02-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2021-02-15",
       "end_date": "2021-02-28",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-03-01",
       "end_date": "2021-03-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-03-15",
       "end_date": "2021-03-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Lukas"
     },
     {
@@ -489,34 +484,34 @@
       "start_date": "2021-04-01",
       "end_date": "2021-04-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2021-04-15",
       "end_date": "2021-04-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-05-01",
       "end_date": "2021-05-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-05-15",
       "end_date": "2021-05-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
@@ -525,34 +520,34 @@
       "start_date": "2021-06-01",
       "end_date": "2021-06-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2021-06-15",
       "end_date": "2021-06-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-07-01",
       "end_date": "2021-07-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-07-15",
       "end_date": "2021-07-30",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
@@ -561,34 +556,34 @@
       "start_date": "2021-08-01",
       "end_date": "2021-08-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2021-08-15",
       "end_date": "2021-08-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud - Frontend",
-      "description": "KOLIBRI Cloud - Frontend development",
+      "title": "Cloud - Frontend",
+      "description": "Cloud - Frontend development",
       "start_date": "2021-09-01",
       "end_date": "2021-09-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Frontend",
+      "swimlane": "Cloud Frontend",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Cloud Backend",
+      "title": "Cloud Backend",
       "description": "Backend",
       "start_date": "2021-09-15",
       "end_date": "2021-09-31",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Backend",
+      "swimlane": "Cloud Backend",
       "resource": "Lukas"
     },
     {
@@ -597,16 +592,16 @@
       "start_date": "2021-10-01",
       "end_date": "2021-10-15",
       "link": "https://docs.kolibricloud.ch/overview/roadmap/",
-      "swimlane": "KOLIBRI Cloud Support",
+      "swimlane": "Cloud Support",
       "resource": "Lukas"
     },
     {
-      "title": "KOLIBRI Desktop",
+      "title": "Desktop",
       "description": "The new Logger",
       "start_date": "2021-10-15",
       "end_date": "2021-10-30",
       "link": "https://keller-druck.com/en/products/software/kolibri-suite/kolibri-desktop",
-      "swimlane": "KOLIBRI Desktop",
+      "swimlane": "Desktop",
       "resource": "Lukas"
     }
   ]
